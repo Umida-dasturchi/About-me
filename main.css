@@ -1,0 +1,103 @@
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+    font-weight: 400;
+    margin-left: 5.375rem;
+    line-height: 1.6;
+    text-align: left;
+    background: #000;
+    color: #ff4500;
+}
+
+/*! Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 29rem 5rem 0;
+}
+header h2 a {
+    text-decoration: none;
+    color: orangered;
+}
+nav {
+    padding-right: 20px;
+}
+nav:nth-child(2) {
+    margin-right: 4rem;
+}
+nav a {
+    margin-left: 1.25rem;
+    text-decoration: none;
+    color: orange;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: orangered;
+}
+
+/*TODO Main */
+main {
+    display: flex;
+    max-width: 43.75rem;
+    flex-wrap: wrap;
+}
+main img {
+    clip-path: circle(50% at 50% 50%);
+    width: 138px;
+    height: 138px;
+    object-fit: cover;
+    margin: 0 2.8125rem 3rem 0;
+
+}
+section h1 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+section h3 {
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+    color: orange;
+}
+
+/* Social media icon styles */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.social-links a {
+    color: orangered;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/** Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    margin-top: 4.5rem;
+    color: orange;
+}
