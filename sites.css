@@ -190,7 +190,7 @@ footer {
     text-align: center;
     padding: 2rem 0;
     font-size: 0.9rem;
-    margin-top: 4.5rem;
+    margin-top: 90%;
     color: var(--muted);
 }
 
@@ -224,3 +224,4 @@ footer {
     color: var(--text-color);
   }
 }
+
