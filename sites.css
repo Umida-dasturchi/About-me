@@ -45,6 +45,7 @@ header {
 header h2 {
     font-size: 1.2rem;
     font-weight: 800;
+    color: var(--text-color)
 }
 
 header h2 a {
@@ -181,5 +182,6 @@ footer {
         margin-right: auto;
     }
 }
+
 
 
