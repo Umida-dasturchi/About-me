@@ -8,10 +8,10 @@
 }
 
 :root {
-    --bg: #1c1c1c;
+    --bg: #0d0d0d;
     --text: #ff4500;
-    --accent: #ffa500;
-    --hover: #ff6347;
+    --accent: #ff3c00;
+    --hover: #ff7b00;
 }
 
 body {
@@ -126,10 +126,11 @@ main {
 hr {
     border: none;
     height: 1px;
-    width: 96%;
+    width: 100%;
     max-width: 59rem;
-    background: var(--accent);
-    margin: 0 auto;
+    background: var(--hover);
+    margin: 2rem auto;
+   box-shadow: 0 0 10px var(--hover);
 }
 
 h1 {
@@ -198,4 +199,5 @@ footer {
         font-size: 1.6rem;
     }
 }
+
 
