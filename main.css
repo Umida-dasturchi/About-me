@@ -13,8 +13,8 @@ body {
     margin-left: 5.375rem;
     line-height: 1.6;
     text-align: left;
-    background: #000;
-    color: #ff4500;
+    background: #0d0d0d;
+    color: #f5f5f5;
     animation: fadeIn 1.2s ease-in-out;
 }
 
@@ -64,7 +64,7 @@ nav a {
     transition: color 0.2s;
 }
 nav a:hover {
-    color: orangered;
+    color: #ff4d00;
 }
 
 /*TODO Main */
@@ -108,7 +108,7 @@ section h3 {
 }
 
 .social-links a:hover {
-    color: #fff;
+    color: #ff4d00;
     transform: scale(1.2);
     transform: translateY(-3px);
 }
@@ -122,6 +122,7 @@ footer {
     color: orange;
 
 }
+
 
 
 
