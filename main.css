@@ -99,6 +99,14 @@ nsv a::after {
     background: var(--accent);
     transition: width 0.3s ease;
 }
+
+a {
+    color: var(--text-color);
+}
+a:visited {
+    color: var(--text-color);
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -172,3 +180,4 @@ footer {
     margin-top: 4.5rem;
     color: var(--muted);
 }
+
