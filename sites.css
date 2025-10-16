@@ -129,6 +129,11 @@ main p {
     box-shadow: 0 0 .9375rem rgba(255, 123, 0, 0.15);
 }
 
+main, section {
+    padding-left: 0;
+    margin-left: 0;
+}
+
 .or {
     color: var(--accent2);
     font-size: 0.9rem;
@@ -176,4 +181,5 @@ footer {
         margin-right: auto;
     }
 }
+
 
