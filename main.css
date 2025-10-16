@@ -57,6 +57,11 @@ nav ul{
     gap: 1.2rem;
     flex-wrap: wrap;
 }
+
+nav ul li {
+    list-style: none;
+}
+
 nav:nth-child(2) {
     margin-right: 4rem;
 }
@@ -68,6 +73,12 @@ nav a {
 }
 nav a:hover {
     color: #ff4d00;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /*TODO Main */
@@ -121,6 +132,7 @@ footer {
     font-size: 0.5rem;
     margin-top: 4.5rem;
 }
+
 
 
 
