@@ -1,7 +1,17 @@
+/* -------------------------
+   GLOBAL STYLES
+-------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --bg: #1c1c1c;
+    --text: #ff4500;
+    --accent: #ffa500;
+    --hover: #ff6347;
 }
 
 body {
@@ -9,122 +19,182 @@ body {
     font-weight: 400;
     line-height: 1.6;
     text-align: left;
-    background: #1c1c1c;
-    color: #ff4500;
+    background: var(--bg);
+    color: var(--text);
     scroll-behavior: smooth;
 }
 
-/*! Header */
+/* Remove default link colors (blue/violet) */
+a,
+a:visited,
+a:active {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover);
+    text-decoration: underline;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* -------------------------
+   HEADER
+-------------------------- */
 header {
     display: flex;
     justify-content: space-between;
-    padding-top: 2.5rem;
-    padding-left: 5.375rem;
-    z-index: 10;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.5rem 5.375rem 1.5rem;
     box-shadow: 0 .125rem .5rem rgba(0, 0, 0, 0.3);
+    background: #000;
+    position: relative;
+    z-index: 10;
 }
 
 header h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 800;
-    margin: 0 29rem 1.375rem 0;
-}
-header h2 a {
-    text-decoration: none;
-    color: orangered;
+    color: var(--accent);
+    flex: 1 1 auto;
 }
 
+header h2 a {
+    color: var(--text);
+}
+
+header h2 a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent);
+}
+
+/* Navigation */
 nav {
     display: flex;
-    padding-right: 20px;
-}
-
-nav:nth-child(2) {
-    margin-right: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
 }
 
 nav a {
-    margin-left: 1.25rem;
-    text-decoration: none;
-    color: orange;
+    color: var(--accent);
     font-size: 0.95rem;
-    transition: color 0.2s, transform 0.2s;
+    font-weight: 500;
+    position: relative;
 }
 
-nav a:hover {
-    color: #ff4500;
-    transform: scale(1.05);
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: var(--hover);
+    transition: width 0.3s ease;
 }
 
-/*~ Circle years */
+nav a:hover::after {
+    width: 100%;
+}
+
+/* -------------------------
+   MAIN CONTENT
+-------------------------- */
+main {
+    background: #000;
+    padding: 2rem 5.375rem 6rem;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.1);
+}
+
 .year {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 5.5rem;
     height: 2.75rem;
-    background: #ffa500;
+    background: var(--accent);
     border-radius: 1.25rem;
     font-weight: 700;
     font-size: 1.2rem;
     line-height: 1;
     margin-top: 22px;
-    padding-bottom: 1.375rem;
 }
 
 hr {
     border: none;
-    height: .0625rem;
+    height: 1px;
     width: 90%;
     max-width: 59rem;
-    background: #ffa500;
-    margin-left: 5.375rem;
+    background: var(--accent);
+    margin: 1.5rem auto;
 }
 
 h1 {
     font-size: 2rem;
     font-weight: 700;
-    margin: 2rem 0 2.625rem;
+    margin: 2rem 0;
     text-align: center;
 }
 
-main {
-    background: #000;
-    padding-left: 5.375rem;
-    margin: 0 auto 6rem;
-}
 main h3 {
     font-size: 1.2rem;
     padding-top: 1.375rem;
 }
+
 main p {
     font-size: 1.05rem;
+    color: #f0f0f0;
     box-shadow: 0 0 .9375rem rgba(255, 69, 0, 0.15);
 }
+
 .or {
-    color: #ffa500;
+    color: var(--accent);
     font-size: 0.9rem;
     margin-top: 2rem;
 }
-main hr {
-    width: 34.125rem;
-    margin: 1.75rem 0 1.75rem 0;
-}
-main a {
-    color: orange;
-    text-decoration: none;
-    font-weight: 600;
-}
-main a:hover {
-    color: orangered;
-    text-decoration: underline;
-}
 
-/** Footer */
+/* -------------------------
+   FOOTER
+-------------------------- */
 footer {
     text-align: center;
     padding: 2rem 0;
     font-size: 0.9rem;
     margin-top: 4.5rem;
-    color: orange;
+    color: var(--accent);
+    background: #000;
+}
+
+/* -------------------------
+   RESPONSIVE DESIGN
+-------------------------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0.8rem;
+    }
+
+    nav a {
+        white-space: nowrap;
+        font-size: 1rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    main {
+        padding: 1rem 2rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
 }
