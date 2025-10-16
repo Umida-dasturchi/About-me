@@ -37,7 +37,6 @@ body {
 /* 🧭 Header */
 header {
     display: flex;
-    margin-left: 0;
     justify-content: space-between;
     align-items: center;
     padding: 2.5rem 5.375rem 1rem;
@@ -184,6 +183,7 @@ footer {
         margin-right: auto;
     }
 }
+
 
 
 
