@@ -11,6 +11,7 @@
     --bg-color: #0d0d0d;
     --text-color: #f5f5f5;
     --accent: #ff3c00;
+    --accent2: #ff7b00;
     --muted: #b3b3b3;
 }
 
@@ -62,6 +63,9 @@ header h2 {
 header h2 a {
     text-decoration: none;
 }
+header h2 a:hover {
+    text-shadow: 0 0 10px var(--accent2);
+}
 nav ul{
     padding-right: 20px;
     display: flex;
@@ -73,6 +77,11 @@ nav ul{
 
 nav ul li {
     list-style: none;
+    opacity: 0;
+    animation: fadeInNav 0.6s ease forwards;
+}
+@keyframes fadeInNav {
+    to {opacity: 1;}
 }
 
 nav:nth-child(2) {
@@ -87,13 +96,14 @@ nav a {
 }
 nav a:hover {
     color: var(--accent);
-    text-shadow: 0 0 6px rgba(255, 60, 0, 0.5);
+    text-shadow: 0 0 8px rgba(255, 60, 0, 0.6);
+    transform: translateY(-2px);
     transition: all 0.3s ease;
 }
 nav a:hover::after {
     width: 100%;
 }
-nsv a::after {
+nav a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -102,13 +112,6 @@ nsv a::after {
     height: 1px;
     background: var(--accent);
     transition: width 0.3s ease;
-}
-
-a {
-    color: var(--text-color);
-}
-a:visited {
-    color: var(--text-color);
 }
 
 @media (max-width: 768px) {
@@ -123,12 +126,18 @@ a:visited {
     nav ul {
         flex-direction: row;
         flex-wrap: nowrap;
+        overflow-x: auto;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.8rem;
     }
     nav a {
+        white-space:nowrap;
         display: inline-block;
         padding: 0.3rem 0.5rem;
+        color: var(--text-color)
+    }
+    nav a:visited {
+        color: var(--text-color);
     }
 }
 
@@ -190,5 +199,6 @@ footer {
     margin-top: 4.5rem;
     color: var(--muted);
 }
+
 
 
