@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: cursive;
+    font-family: Poppins;
     font-weight: 400;
     margin-left: 5.375rem;
     line-height: 1.6;
@@ -100,4 +100,5 @@ footer {
     font-size: 0.9rem;
     margin-top: 4.5rem;
     color: orange;
+
 }
