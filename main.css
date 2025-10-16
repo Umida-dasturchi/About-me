@@ -104,11 +104,13 @@ section h3 {
     font-size: 1.5rem;
     transition: color 0.3s, transform 0.3s;
     text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
     color: #fff;
     transform: scale(1.2);
+    transform: translateY(-3px);
 }
 
 /** Footer */
@@ -120,6 +122,7 @@ footer {
     color: orange;
 
 }
+
 
 
 
