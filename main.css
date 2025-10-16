@@ -48,7 +48,6 @@ header h2 {
 }
 header h2 a {
     text-decoration: none;
-    color: orangered;
 }
 nav {
     padding-right: 20px;
@@ -59,7 +58,6 @@ nav:nth-child(2) {
 nav a {
     margin-left: 1.25rem;
     text-decoration: none;
-    color: orange;
     font-size: 0.95rem;
     transition: color 0.2s;
 }
@@ -89,7 +87,6 @@ section h1 {
 section h3 {
     font-weight: 400;
     margin-bottom: 0.8rem;
-    color: orange;
 }
 
 /* Social media icon styles */
@@ -100,7 +97,6 @@ section h3 {
 }
 
 .social-links a {
-    color: orangered;
     font-size: 1.5rem;
     transition: color 0.3s, transform 0.3s;
     text-decoration: none;
@@ -119,9 +115,8 @@ footer {
     padding: 2rem 0;
     font-size: 0.5rem;
     margin-top: 4.5rem;
-    color: orange;
-
 }
+
 
 
 
