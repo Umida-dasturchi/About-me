@@ -129,7 +129,7 @@ hr {
     width: 96%;
     max-width: 59rem;
     background: var(--accent);
-    margin: 0.7rem auto;
+    margin: 0 auto;
 }
 
 h1 {
@@ -198,3 +198,4 @@ footer {
         font-size: 1.6rem;
     }
 }
+
