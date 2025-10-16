@@ -21,6 +21,7 @@ body {
     font-weight: 400;
     line-height: 1.6;
     text-align: left;
+    margin-left: 3rem;
     background: var(--bg-color);
     color: var(--text-color);
     scroll-behavior: smooth;
@@ -182,6 +183,7 @@ footer {
         margin-right: auto;
     }
 }
+
 
 
 
