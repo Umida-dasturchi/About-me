@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-/* 🎨 Theme Variables */
+/* 🌙 Color Theme */
 :root {
     --bg-color: #0d0d0d;
     --text-color: #f5f5f5;
@@ -15,8 +15,9 @@
     --muted: #b3b3b3;
 }
 
+/* 🌐 General Body */
 body {
-    font-family: Inter, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     line-height: 1.6;
     text-align: left;
@@ -26,35 +27,26 @@ body {
     animation: fadeIn 1.2s ease-in-out;
 }
 
-/* 🕊️ Fade-in Animations */
-.fade {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeUp 1s ease forwards;
-}
+/* ✨ Animations */
 @keyframes fadeUp {
     0% {opacity: 0; transform: translateY(10px);}
-    60% {opacity: 0.7; transform: translateY(3px);}
     100% {opacity: 1; transform: translateY(0);}
 }
-.delay1 {animation-delay: 0.3s;}
-.delay2 {animation-delay: 0.6s;}
-.delay3 {animation-delay: 0.9s;}
 
-/* 🌑 Header */
+/* 🧭 Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2.5rem 5.375rem 1rem;
-    z-index: 10;
-    box-shadow: 0 .125rem .5rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 header h2 {
     font-size: 1.2rem;
     font-weight: 800;
 }
+
 header h2 a {
     text-decoration: none;
     color: var(--accent);
@@ -64,11 +56,12 @@ header h2 a:hover {
     text-shadow: 0 0 10px var(--accent2);
 }
 
+/* 🔗 Navigation */
 nav {
     display: flex;
     gap: 1.25rem;
-    padding-right: 20px;
 }
+
 nav a {
     text-decoration: none;
     color: var(--accent2);
@@ -80,7 +73,7 @@ nav a:hover {
     transform: scale(1.08);
 }
 
-/* 📅 Year Badge */
+/* 📅 Year Labels */
 .year {
     display: inline-flex;
     justify-content: center;
@@ -91,22 +84,22 @@ nav a:hover {
     border-radius: 1.25rem;
     font-weight: 700;
     font-size: 1.2rem;
-    line-height: 1;
     margin-top: 1.5rem;
+    color: #000;
 }
 
-/* ─── Divider Line ─── */
+/* ─────────── Divider Lines ─────────── */
 hr {
     border: none;
     height: 1px;
-    width: 100%;
-    max-width: 59rem;
+    width: calc(100% - 10.75rem); /* perfectly aligns with left padding */
     background: var(--accent2);
-    margin: 2rem auto;
-    box-shadow: 0 0 10px var(--accent2);
+    margin: 2rem 0;
+    margin-left: 5.375rem;
+    box-shadow: 0 0 10px rgba(255, 123, 0, 0.3);
 }
 
-/* 📝 Headings */
+/* 🧠 Headings */
 h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -114,36 +107,41 @@ h1 {
     text-align: center;
     color: var(--accent);
 }
+h3 {
+    color: var(--accent2);
+}
 
+/* 📄 Main Section */
 main {
     background: #000;
-    padding: 0 5.375rem;
+    padding-left: 5.375rem;
     margin: 0 auto 6rem;
 }
+
 main h3 {
     font-size: 1.2rem;
     padding-top: 1.375rem;
-    color: var(--accent2);
 }
+
 main p {
     font-size: 1.05rem;
-    box-shadow: 0 0 .9375rem rgba(255, 123, 0, 0.15);
     padding: 0.3rem 0;
+    box-shadow: 0 0 .9375rem rgba(255, 123, 0, 0.15);
 }
+
 .or {
     color: var(--accent2);
     font-size: 0.9rem;
     margin-top: 2rem;
 }
 
-/* Links inside main */
-main a {
+/* 🧷 Links */
+a {
     color: var(--accent2);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s, text-shadow 0.3s;
 }
-main a:hover {
+a:hover {
     color: var(--accent);
     text-decoration: underline;
     text-shadow: 0 0 6px var(--accent);
@@ -158,13 +156,12 @@ footer {
     color: var(--muted);
 }
 
-/* 📱 Responsive */
+/* 📱 Responsive Design */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: center;
-        padding: 1.5rem;
         text-align: center;
+        padding: 1.5rem;
     }
     nav {
         flex-wrap: wrap;
@@ -175,5 +172,7 @@ footer {
     }
     hr {
         width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
