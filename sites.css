@@ -126,7 +126,7 @@ main {
 hr {
     border: none;
     height: 1px;
-    width: 90%;
+    width: 95%;
     max-width: 59rem;
     background: var(--accent);
     margin: 1.5rem auto;
@@ -198,3 +198,4 @@ footer {
         font-size: 1.6rem;
     }
 }
+
