@@ -189,9 +189,6 @@ a:hover {
   color: var(--accent);
   text-shadow: 0 0 6px var(--accent);
 }
-a:visited {
-  color: var(--accent2);
-}
 
 /* 👣 Footer */
 footer {
@@ -237,6 +234,3 @@ footer {
     margin-left: -0.75rem;
   }
 }
-
-
-
