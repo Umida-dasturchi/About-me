@@ -150,7 +150,7 @@ h1 {
   font-weight: 700;
   margin: 2rem 0 2.625rem;
   text-align: center;
-  color: var(--accent);
+  color: var(--text-color);
 }
 
 h3 {
@@ -238,4 +238,5 @@ footer {
     margin-left: -0.75rem;
   }
 }
+
 
