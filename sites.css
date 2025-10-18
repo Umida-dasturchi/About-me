@@ -130,7 +130,7 @@ nav a:hover::after {
 }
 
 /* ─────────── Divider Lines ─────────── */
-hr {
+hr:not(:first-child) {
     border: none;
     height: 1px;
     width: 100%;
@@ -238,3 +238,4 @@ hr {
     margin-left: -1.5rem;
     width: calc(100% + 3rem);
 }
+
