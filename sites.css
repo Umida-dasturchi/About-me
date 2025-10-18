@@ -120,7 +120,7 @@ nav a:hover::after {
   align-items: center;
   width: 5.5rem;
   height: 2.75rem;
-  background: var(--accent2);
+  background: var(--text-color);
   border-radius: 1.25rem;
   font-weight: 700;
   font-size: 1.2rem;
@@ -175,7 +175,7 @@ main p {
 }
 
 .or {
-  color: var(--accent2);
+  color: var(--text-color);
   font-size: 0.9rem;
   margin-top: 2rem;
 }
@@ -238,3 +238,4 @@ footer {
     margin-left: -0.75rem;
   }
 }
+
