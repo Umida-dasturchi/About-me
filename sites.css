@@ -32,6 +32,7 @@ body {
     scroll-behavior: smooth;
     animation: fadeIn 1.2s ease-in-out;
     padding: 0 3rem; /* 🟠 breathing space left/right */
+    overflow-x: hidden;
 }
 
 /* ✨ Animations */
@@ -242,5 +243,3 @@ footer {
     color: var(--text-color);
   }
 }
-
-
