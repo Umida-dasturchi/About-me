@@ -47,11 +47,13 @@ body {
 /* 🧭 Header */
 header {
   display: flex;
+  position: fixed;
   align-items: center;
   justify-content: space-between; /* ✅ nav on right */
   flex-wrap: wrap;
   padding: 2.5rem 0 1rem;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #ddd;
 }
 
 header h2 {
@@ -234,3 +236,4 @@ footer {
     margin-left: -0.75rem;
   }
 }
+
