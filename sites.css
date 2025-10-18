@@ -139,7 +139,6 @@ main hr {
   height: 1px;
   border: none;
   background: #fff;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   margin: 1rem 0;
 }
 
@@ -200,7 +199,7 @@ footer {
   margin-top: auto; /* ✅ keeps at bottom */
   text-align: center;
   padding: 2rem 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--muted);
 }
 
@@ -237,3 +236,4 @@ footer {
     margin-left: -0.75rem;
   }
 }
+
