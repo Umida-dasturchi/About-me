@@ -42,7 +42,7 @@ body {
 /* 🧭 Header */
 header {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     padding: 2.5rem 0 1rem;
@@ -239,10 +239,3 @@ footer {
     color: var(--text-color);
   }
 }
-
-hr {
-    margin-left: -1.5rem;
-    width: calc(100% + 3rem);
-}
-
-
