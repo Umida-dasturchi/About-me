@@ -1,14 +1,10 @@
-html, body {
-    height: 100%;
-    min-height: 100vh;
-}
-
+/* 🌍 Base Reset */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* 🌙 Color Theme */
@@ -20,60 +16,67 @@ html, body {
   --muted: #b3b3b3;
 }
 
-/* 🌐 Body */
+/* 🧱 Layout */
+html, body {
+  height: 100%;
+  min-height: 100vh; /* ensures footer at bottom */
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    background: var(--bg-color);
-    color: var(--text-color);
-    scroll-behavior: smooth;
-    animation: fadeIn 1.2s ease-in-out;
-    padding: 0 3rem; /* 🟠 breathing space left/right */
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  animation: fadeIn 1.2s ease-in-out;
+  padding: 0 3rem;
+  overflow-x: hidden;
 }
 
 /* ✨ Animations */
-@keyframes fadeUp {
-    0% {opacity: 0; transform: translateY(10px);}
-    100% {opacity: 1; transform: translateY(0);}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInNav {
+  to { opacity: 1; }
 }
 
 /* 🧭 Header */
 header {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2.5rem 0 1rem;
-    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ✅ nav on right */
+  flex-wrap: wrap;
+  padding: 2.5rem 0 1rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 header h2 {
-    font-size: 1.2rem;
-    font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 header h2 a {
-    text-decoration: none;
-    color: var(--text-color);
-    transition: text-shadow 0.3s ease;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: text-shadow 0.3s ease;
 }
 
 header h2 a:hover {
-    text-shadow: 0 0 10px var(--accent2);
+  text-shadow: 0 0 10px var(--accent2);
 }
 
 /* 🔗 Navigation */
 nav ul {
-    padding-right: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  padding-right: 20px;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -82,26 +85,20 @@ nav ul li {
   animation: fadeInNav 0.6s ease forwards;
 }
 
-@keyframes fadeInNav {
-  to { opacity: 1; }
-}
-
 nav a {
-    margin: 0;
-    position: relative;
-    text-decoration: none;
-    font-size: 0.95rem;
-    color: var(--text-color);
-    transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--accent);
-    text-shadow: 0 0 8px rgba(255, 60, 0, 0.6);
-    transform: translateY(-2px);
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(255, 60, 0, 0.6);
+  transform: translateY(-2px);
 }
 
-/* Remove underline effect */
 nav a::after {
   content: '';
   position: absolute;
@@ -118,30 +115,29 @@ nav a:hover::after {
 
 /* 📅 Year Labels */
 .year {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 5.5rem;
-    height: 2.75rem;
-    background: var(--accent2);
-    border-radius: 1.25rem;
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-    color: #000;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.5rem;
+  height: 2.75rem;
+  background: var(--accent2);
+  border-radius: 1.25rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  color: #000;
 }
 
 /* --- HR Styling --- */
 main hr {
-  width: 100%;
+  width: calc(100% + 3rem); /* extends fully to sides */
+  margin-left: -1.5rem;
   height: 1px;
   border: none;
-  background: #fff; /* ✅ white line */
-  border-top: 1px solid var(--accent2); /* or your secondary color */
+  background: #fff;
+  border-top: 1px solid var(--accent2);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   margin: 1rem 0;
-  margin-left: -2rem;
-  width: calc(100% + 4rem);
 }
 
 /* Adds extra top spacing only after the first one */
@@ -151,66 +147,64 @@ main hr:not(:first-child) {
 
 /* 🧠 Headings */
 h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 2rem 0 2.625rem;
-    text-align: center;
-    color: var(--accent);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0 2.625rem;
+  text-align: center;
+  color: var(--accent);
 }
 
 h3 {
-    color: var(--accent2);
+  color: var(--accent2);
+  font-size: 1.2rem;
+  padding-top: 1.375rem;
 }
 
 /* 📄 Main Section */
 main {
-    display: flex;
-    flex: 1;
-    padding: 0 2rem;
-    margin: 0 auto 6rem;
-    max-width: 43.75rem;
-    flex-wrap: wrap;
-    border-radius: 0.5rem;
-}
-
-main h3 {
-    font-size: 1.2rem;
-    padding-top: 1.375rem;
+  flex: 1;
+  padding: 0 2rem;
+  margin: 0 auto 6rem;
+  max-width: 43.75rem;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
 }
 
 main p {
-    font-size: 1.05rem;
-    padding: 0.3rem 0;
-    box-shadow: 0 0 .9375rem rgba(255, 123, 0, 0.1);
+  font-size: 1.05rem;
+  padding: 0.3rem 0;
+  box-shadow: 0 0 0.9375rem rgba(255, 123, 0, 0.1);
 }
 
 .or {
-    color: var(--accent2);
-    font-size: 0.9rem;
-    margin-top: 2rem;
+  color: var(--accent2);
+  font-size: 0.9rem;
+  margin-top: 2rem;
 }
 
 /* 🧷 Links */
 a {
-    color: var(--accent2);
-    text-decoration: none;
-    font-weight: 600;
+  color: var(--accent2);
+  text-decoration: none;
+  font-weight: 600;
 }
-
 a:hover {
-    color: var(--accent);
-    text-shadow: 0 0 6px var(--accent);
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--accent);
+}
+a:visited {
+  color: var(--accent2);
 }
 
 /* 👣 Footer */
 footer {
-    text-align: center;
-    padding: 2rem 0;
-    font-size: 0.9rem;
-    margin-top: auto;
-    color: var(--muted);
-    border-top: 1px solid rgba(255, 123, 0, 0.3);
-    box-shadow: 0 -2px 10px rgba(255, 123, 0, 0.2);
+  margin-top: auto; /* ✅ keeps at bottom */
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 123, 0, 0.3);
+  box-shadow: 0 -2px 10px rgba(255, 123, 0, 0.2);
 }
 
 /* 📱 Responsive */
@@ -233,13 +227,16 @@ footer {
     justify-content: center;
     gap: 0.8rem;
   }
+
   nav a {
     white-space: nowrap;
     display: inline-block;
     padding: 0.3rem 0.5rem;
     color: var(--text-color);
   }
-  nav a:visited {
-    color: var(--text-color);
+
+  main hr {
+    width: calc(100% + 1.5rem);
+    margin-left: -0.75rem;
   }
 }
