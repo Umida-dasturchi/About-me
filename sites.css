@@ -12,7 +12,6 @@
   --bg-color: #0d0d0d;
   --text-color: #f5f5f5;
   --accent: #ff3c00;
-  --accent2: #ff7b00;
   --muted: #b3b3b3;
 }
 
@@ -238,5 +237,6 @@ footer {
     margin-left: -0.75rem;
   }
 }
+
 
 
