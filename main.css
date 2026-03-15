@@ -45,8 +45,36 @@ body {
 .delay2 { animation-delay: 0.6s; }
 .delay3 { animation-delay: 0.9s; }
 
+/* Scrollbar container constraints */
 .box {
-    scrollbar-color: var(--accent2) var(--accent);
+    /* Set a height to ensure the content overflows, triggering the scrollbar */
+    height: 90vh; 
+    overflow-y: auto;
+    padding-right: 1rem;
+
+    /* Standard property for Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent2) #1a1a1a;
+}
+
+/* Chrome, Edge, and Safari Webkit overrides */
+.box::-webkit-scrollbar {
+    width: 10px;
+}
+
+.box::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Background of the bar */
+}
+
+.box::-webkit-scrollbar-thumb {
+    background-color: var(--accent2); /* The color of the scrolling handle */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #1a1a1a; /* Creates the 'gap' effect */
+}
+
+/* Optional: Add hover effect to the thumb */
+.box::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accent); /* Changes color on hover */
 }
 
 /* Header */
